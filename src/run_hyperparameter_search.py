@@ -44,7 +44,7 @@ test_data = boolq.BoolQDataset(test_df, tokenizer)
 from transformers import TrainingArguments
 
 training_args = TrainingArguments(
-	output_dir = "/scratch/${USER}}/hw3/checkpoints",
+	output_dir = "/scratch/${USER}/hw3/checkpoints",
     do_train = True,
     do_eval = True,
     per_gpu_train_batch_size = 8,
