@@ -15,7 +15,7 @@
 singularity exec --nv --overlay $SCRATCH/overlay-25GB-500K.ext3:ro /scratch/work/public/singularity/cuda10.1-cudnn7-devel-ubuntu18.04-20201207.sif /bin/bash0 -c "
 source /ext3/env.sh
 conda activate
-python ./run_hyperparameter_search.py BoolQ/
+python ./src/run_hyperparameter_search.py BoolQ/
 "
 
 #SBATCH --mail-user=bxw201@nyu.edu
