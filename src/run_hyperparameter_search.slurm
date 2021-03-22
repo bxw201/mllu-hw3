@@ -17,3 +17,5 @@ source /ext3/env.sh
 conda activate
 python ./run_hyperparameter_search.py BoolQ/
 "
+
+#SBATCH --mail-user=bxw201@nyu.edu
