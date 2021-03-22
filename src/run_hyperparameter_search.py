@@ -80,7 +80,7 @@ trainer = Trainer(
 	)
 
 best_run = trainer.hyperparameter_search(
-	hp_space = labmda _: {'learning_rate' : tune.loguniform(1e-5, 5e-5)},
+	hp_space = labmda x: {'learning_rate' : tune.loguniform(1e-5, 5e-5)},
 	n_trials = 10,
 	search_alg = BayesOptSearch()
 	)
