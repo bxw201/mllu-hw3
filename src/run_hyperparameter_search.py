@@ -85,6 +85,8 @@ best_run = trainer.hyperparameter_search(
 	search_alg = BayesOptSearch()
 	)
 
+trainer.save_model('best_roberta_base')
+
 print("run_id: \n" + best_run.run_id)
 print("objective: \n" + best_run.objective)
 print("hyperparameter: \n" + best_run.hyperparameters)
