@@ -75,10 +75,10 @@ trainer = Trainer(
 	finetuning_utils.model_init(),
 	training_args,
 	train_dataset = train_data,
-	eval_data = val_data,
+	eval_dataset = val_data,
 	tokenizer = tokenizer,
 	)
-
+print("we're schmoovin")
 best_run = trainer.hyperparameter_search(
 	hp_space = lambda x: {'learning_rate' : tune.loguniform(1e-5, 5e-5)},
 	n_trials = 10,
