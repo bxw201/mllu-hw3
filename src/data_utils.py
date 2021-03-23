@@ -25,7 +25,7 @@ def encode_data(dataset, tokenizer, max_seq_length=128):
     ## Use the tokenizer provided in the argument and see the code comments above for
     ## more details.
     # tknzr = tokenizer(['a', 'b', 'c'], model_max_length=max_seq_length, pad_token='[PAD]', padding_side='right')
-    batch_encoding = tokenizer(text=[dataset['question'].tolist(), dataset['passage'].tolist()], 
+    batch_encoding = tokenizer(dataset['question'].tolist(), dataset['passage'].tolist(), 
     	return_tensors='pt', 
     	padding=True, 
     	truncation=True, 
